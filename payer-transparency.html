@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Payer Rate Transparency Platform - AcmeBuilders</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">AcmeBuilders</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="payer-transparency.html" class="active">Payer Transparency</a></li>
+						<li><a href="hospital-cdm.html">Hospital CDM</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Payer Rate Transparency Platform</h1>
+							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+							
+							<h2>Every negotiated rate from 900+ US health insurers</h2>
+							<p>Under the CMS Transparency in Coverage rule, health insurers must publish negotiated rates with providers. We aggregate all these files, normalize the data, and deliver it via a clean REST API. You get every negotiated rate: what UnitedHealthcare pays Hospital A for procedure X, what Aetna pays Hospital B, what regional payers negotiate—all in one queryable database.</p>
+
+							<p style="font-size: 1.2em; color: #5e42a6;"><strong>Starting at $10,000/year</strong></p>
+
+							<h2>What You Get</h2>
+							<ul>
+								<li><strong>50M+ negotiated rates</strong> from 900+ insurance companies</li>
+								<li><strong>REST API</strong> with complete documentation and code samples</li>
+								<li><strong>Monthly data refreshes</strong> — we monitor payer file changes automatically</li>
+								<li><strong>White-label licensing</strong> — remove our name entirely, build your branded tool</li>
+								<li><strong>Clean, normalized data</strong> — we handle parsing nested JSON, standardizing procedure codes, resolving duplicates</li>
+							</ul>
+
+							<h2>API Example</h2>
+							<pre><code>GET /api/v1/rates?cpt=27447&zip=90210&payer=UnitedHealthcare
+
+Response:
+{
+  "procedure": {
+    "cpt_code": "27447",
+    "description": "Total knee arthroplasty"
+  },
+  "location": {
+    "zip": "90210",
+    "city": "Beverly Hills",
+    "state": "CA"
+  },
+  "rates": [
+    {
+      "payer": "UnitedHealthcare",
+      "provider": "Cedars-Sinai Medical Center",
+      "negotiated_rate": 24500.00,
+      "billing_class": "Inpatient"
+    },
+    {
+      "payer": "UnitedHealthcare", 
+      "provider": "UCLA Medical Center",
+      "negotiated_rate": 26800.00,
+      "billing_class": "Inpatient"
+    }
+  ],
+  "market_statistics": {
+    "median": 23200.00,
+    "min": 18500.00,
+    "max": 32000.00,
+    "count": 47
+  }
+}</code></pre>
+
+							<h2>Use Cases</h2>
+							
+							<h3>Benefits Consultants</h3>
+							<p>Benchmark employer health plan contracts: "Your UnitedHealthcare knee replacement rate is 30% above market median." Show clients exactly where they're overpaying and negotiate better contracts.</p>
+
+							<h3>Third-Party Administrators (TPAs)</h3>
+							<p>Build reference-based pricing tools for self-funded employers: "We'll pay 125% of median negotiated rate, not the hospital's billed charge." Save clients 20-40% on healthcare spend.</p>
+
+							<h3>Hospital Revenue Cycle Consultants</h3>
+							<p>Arm provider clients with competitive rate intelligence for contract negotiations: "The hospital 10 miles away gets paid 40% more for the same DRG." Level the playing field.</p>
+
+							<h3>Actuarial Firms</h3>
+							<p>Access longitudinal rate data for medical cost trend forecasting: "Oncology drug rates compressed 15% year-over-year due to biosimilars." Build accurate premium rate models.</p>
+
+							<h3>Health Tech Startups</h3>
+							<p>Embed pricing data into your product without building the aggregation layer yourself. Focus on your core product, not data infrastructure.</p>
+
+							<h2>Technical Details</h2>
+							<ul>
+								<li><strong>Coverage:</strong> 900+ payers, all 50 states</li>
+								<li><strong>Update frequency:</strong> Monthly</li>
+								<li><strong>API format:</strong> REST, JSON responses</li>
+								<li><strong>Authentication:</strong> API key (included)</li>
+								<li><strong>Rate limits:</strong> 100K requests/month (Starter tier)</li>
+								<li><strong>Support:</strong> Email support, 24-hour response time</li>
+								<li><strong>Documentation:</strong> Full API docs, code samples, integration guides</li>
+							</ul>
+
+							<h2>Pricing</h2>
+							<p><strong>Starter:</strong> $10,000/year — One product, API access with 100K queries/month, white-label licensing, monthly updates, email support</p>
+							<p><strong>Professional:</strong> $25,000/year — All products, 500K queries/month, custom data extracts, priority support, quarterly strategy calls</p>
+							<p><strong>Enterprise:</strong> Custom — Dedicated infrastructure, SLA guarantees, bespoke integrations, unlimited queries</p>
+
+							<h2>Ready to Get Started?</h2>
+							<p>Book a 30-minute call to see the data, walk through integration, and discuss your use case.</p>
+							<ul class="actions">
+								<li><a href="index.html#contact" class="button primary">Contact Us</a></li>
+								<li><a href="index.html" class="button">Back to Home</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; AcmeBuilders. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

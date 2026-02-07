@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hospital CDM Inventory - AcmeBuilders</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">AcmeBuilders</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="payer-transparency.html">Payer Transparency</a></li>
+						<li><a href="hospital-cdm.html" class="active">Hospital CDM</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Hospital CDM Inventory</h1>
+							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+							
+							<h2>Complete inventory of hospital pricing data availability</h2>
+							<p>Under CMS Hospital Price Transparency rules, hospitals must publish charge master (CDM) files. But compliance is inconsistent—some hospitals publish, others don't. We've profiled every hospital in the US to tell you: Who has data available? Where is it hosted? What format is it in? What's the file size? We test quarterly and track changes over time.</p>
+
+							<p style="font-size: 1.2em; color: #5e42a6;"><strong>Starting at $5,000/year</strong></p>
+
+							<h2>What You Get</h2>
+							<ul>
+								<li><strong>5,400+ hospitals profiled</strong> with complete availability metadata</li>
+								<li><strong>Hit rate analysis</strong> by state, market type, ownership structure</li>
+								<li><strong>File format detection</strong> — CSV, JSON, Excel, or custom formats</li>
+								<li><strong>Delta table format</strong> for easy integration into your data pipelines</li>
+								<li><strong>Quarterly updates</strong> with compliance tracking over time</li>
+								<li><strong>Direct SQL access</strong> or CSV export (depending on tier)</li>
+							</ul>
+
+							<h2>Data Schema</h2>
+							<pre><code>Table: hospital_cdm_inventory
+
+Columns:
+- hospital_id          : Unique identifier
+- hospital_name        : Facility name
+- city                 : City location  
+- state                : Two-letter state code
+- state_name           : Full state name
+- working_domain       : Website domain
+- cms_hpt_found        : Boolean (TRUE if file exists)
+- cms_hpt_url          : Full URL to CMS-HPT.txt file
+- num_locations        : Number of facility locations
+- cdm_files_accessible : Count of downloadable CDM files
+- total_size_mb        : Total data size in MB
+- file_formats         : CSV, JSON, Excel, etc.
+- status               : SUCCESS | PARTIAL | NOT_FOUND
+- last_checked         : Timestamp of last validation
+
+Example Query:
+SELECT hospital_name, city, total_size_mb, cdm_files_accessible
+FROM hospital_cdm_inventory
+WHERE state = 'CA' 
+  AND status = 'SUCCESS'
+ORDER BY total_size_mb DESC
+LIMIT 20;</code></pre>
+
+							<h2>Use Cases</h2>
+							
+							<h3>Healthcare Consultants</h3>
+							<p>Scope pricing projects before starting: "Which hospitals in Texas have CDM data? What's the file format? Can we even do this analysis?" Save time by knowing coverage upfront.</p>
+
+							<h3>Health Tech Companies</h3>
+							<p>Validate coverage before building product features: "Can we support hospital pricing comparison in this geography? How many hospitals have data?" Avoid building features you can't support.</p>
+
+							<h3>Research Firms</h3>
+							<p>Analyze transparency compliance across markets: "What percentage of rural hospitals publish CDM files? Which states have the best compliance?" Study the landscape.</p>
+
+							<h3>Data Pipeline Builders</h3>
+							<p>Build automated download systems: "Loop through all California hospitals, identify which have JSON vs CSV files, prioritize by file size." Automate data collection.</p>
+
+							<h2>Coverage Statistics</h2>
+							<p>Based on our most recent quarterly scan:</p>
+							<ul>
+								<li><strong>Total hospitals profiled:</strong> 5,421 acute care hospitals</li>
+								<li><strong>Overall hit rate:</strong> ~20-30% (varies by state)</li>
+								<li><strong>File formats:</strong> 60% CSV, 30% JSON, 10% Excel/Other</li>
+								<li><strong>Average file size:</strong> 500 MB (range: <1 MB to 11+ GB)</li>
+								<li><strong>Multi-location systems:</strong> ~800 hospital systems with multiple facilities</li>
+							</ul>
+
+							<h3>Hit Rate by State (Sample)</h3>
+							<ul>
+								<li><strong>California:</strong> 25% of 400+ hospitals</li>
+								<li><strong>Texas:</strong> 22% of 350+ hospitals</li>
+								<li><strong>New York:</strong> 28% of 180+ hospitals</li>
+								<li><strong>Idaho:</strong> 35% of 40+ hospitals (small state, better compliance)</li>
+								<li><strong>National average:</strong> 23% overall</li>
+							</ul>
+
+							<h2>Technical Details</h2>
+							<ul>
+								<li><strong>Coverage:</strong> All 50 states + territories</li>
+								<li><strong>Update frequency:</strong> Quarterly</li>
+								<li><strong>Data format:</strong> Delta table (primary) or CSV export</li>
+								<li><strong>Access methods:</strong> SQL, API (Enterprise), or file download</li>
+								<li><strong>Historical tracking:</strong> See compliance changes over time</li>
+								<li><strong>Support:</strong> Email support, integration assistance</li>
+							</ul>
+
+							<h2>Pricing</h2>
+							<p><strong>Starter:</strong> $5,000/year — Full dataset, CSV export, quarterly updates, email support</p>
+							<p><strong>Professional:</strong> $12,000/year — Delta table access, monthly refreshes, custom queries, priority support</p>
+							<p><strong>Enterprise:</strong> Custom — API access, real-time updates, integration into your infrastructure</p>
+
+							<h2>Sample Data</h2>
+							<p>Want to see what the data looks like before committing? We can provide a sample dataset for your state or region. Contact us to request sample data.</p>
+
+							<h2>Ready to Get Started?</h2>
+							<p>Book a 30-minute call to see the data, discuss integration options, and explore your use case.</p>
+							<ul class="actions">
+								<li><a href="index.html#contact" class="button primary">Contact Us</a></li>
+								<li><a href="index.html" class="button">Back to Home</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; AcmeBuilders. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
