@@ -1,0 +1,113 @@
+/*
+Hyperspace – Safe Color Overrides Only
+Load AFTER main.css
+This file changes colors ONLY (no layout, no spacing)
+*/
+
+:root {
+    --accent: #2DD4BF;
+    --accent-soft: rgba(59,130,246,0.4);
+    
+    --bg-primary: #0F172A;
+    --bg-surface: #1F2933;
+    --bg-surface-alt: #111827;
+    
+    --text-primary: rgba(255,255,255,0.85);
+    --text-secondary: rgba(255,255,255,0.6);
+    --text-muted: rgba(255,255,255,0.45);
+    
+    --border-subtle: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.25);
+    }
+    
+    /* Base background */
+    body {
+    background-color: var(--bg-primary);
+    }
+    
+    /* Text */
+    body, input, select, textarea {
+    color: var(--text-secondary);
+    }
+    
+    strong, b,
+    h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    }
+    
+    /* Headings accent line */
+    h1.major:after {
+    background-image: linear-gradient(to right, var(--accent), var(--accent-soft));
+    }
+    
+    /* Links */
+    a {
+    border-bottom-color: rgba(255,255,255,0.25);
+    }
+    
+    a:hover {
+    color: var(--accent);
+    border-bottom-color: transparent;
+    }
+    
+    /* Boxes / cards */
+    .box {
+    background: var(--bg-surface);
+    }
+    
+    .features {
+    background: var(--bg-surface-alt);
+    }
+    
+    /* Buttons */
+    .button,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+    border-color: var(--border-strong);
+    color: #ffffff !important;
+    }
+    
+    .button.primary,
+    button.primary,
+    input[type="submit"].primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    }
+    
+    .button.primary:hover {
+    background-color: #2563EB;
+    border-color: #2563EB;
+    }
+    
+    /* Forms */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+    background: var(--bg-surface-alt);
+    border-color: var(--border-subtle);
+    color: var(--text-primary);
+    }
+    
+    input:focus,
+    select:focus,
+    textarea:focus {
+    border-color: var(--accent);
+    }
+    
+    ::placeholder {
+    color: var(--text-muted);
+    }
+    
+    /* Icons */
+    .icon.major {
+    background: #ffffff;
+    }
+    
+    .icon.major:before {
+    color: var(--accent);
+    }
+    
+    
